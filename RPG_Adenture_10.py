@@ -77,7 +77,16 @@ def goLeftOrRightDownTunnel():
         items[0].append(5)
         print("After collecting the Nacho Armor, you turn around and go back the way you came.")
     return decision
-
+#Function for the reaper battle
+#uses if statement to continue forward in the story
+def reaperBattleConfrontation():
+    pi = input("What is the number pi to the 4th decimal place?:")
+    if pi != "3.1415":
+        print("Your attempt to defeat me was futile! You will drown in Nacho Hell for eternity!")
+        print("GAME OVER :(")
+        exit(0)
+        return pi
+                    
 #This is an RPG Game!
 #Title Screen
 items = [[],[]]
@@ -108,8 +117,11 @@ if option_title == 'New Game':
     print('The left tunnel is glowing yellowish-orange.')
     print('The right tunnel is smells like cinnamon twists.')
     decision = goLeftOrRightDownTunnel()
-            
-    
+#after obtaining armor you confront the reaper for battle
+    print("That's some beautiful armor there", player_name,".")
+    print("But will it protect you from the wrath of my Ultimate Cheesy Nacho Supreme?")
+    print("The Nacho Reaper sends his cheesy attack your way!")
+    pi = reaperBattleConfrontation()
 
 
           
