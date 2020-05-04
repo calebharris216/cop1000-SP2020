@@ -115,7 +115,23 @@ def covid_19():
   print("As he's telling you, he starts to sweat.")
   print("You start to back away, but it becomes clear that he is infected.")
   print("Your fight or flight instinct kicks in.")
-
+         
+def nachobounty():
+  decision = input('Do you choose to investigate?')
+  while decision != 'yes' and decision != 'no':
+        print('Invalid')
+        print('Do you choose to investigate?')
+        decision = input()
+  if deicison == 'yes':
+        print('You step onto a pile of nachos, and immediately fall into a queso chasm.')
+        print('Nice going.')
+        print('GAME OVER :(')
+        exit(0)
+  if decision == 'no':
+        print("You decide it's best not to be greedy and be on your way.")
+  return decision
+        
+        
 #This is an RPG Game!
 #Title Screen
 items = [[],[]]
@@ -147,6 +163,9 @@ if option_title == 'New Game':
     print('The right tunnel is smells like cinnamon twists.')
     decision = goLeftOrRightDownTunnel()
     decision = covid_19()
+    print('After evading the Nacho Reaper one way or another, you stumble across a hoard of nachos.')
+    print("You suspect this could be the Reaper's prized bounty, but it may also be a trap.")
+    decision = nachobounty()
             
     
 
